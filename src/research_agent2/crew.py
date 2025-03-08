@@ -1,15 +1,12 @@
 from crewai import Agent, Task, Crew
-from crewai_tools import CodeInterpreterTool
-
+from IPython.display import Markdown
 # Initialize the tool
-code_interpreter = CodeInterpreterTool()
 
 # Create an agent with code execution enabled
 coding_agent = Agent(
     role="Python Code Analyzer",
-    goal="Analyze and provide insights on Python code.",
+    goal="Analyze and provide insights on Python code:{topic}.",
     backstory="An experienced AI code reviewer that evaluates Python code for correctness and optimization.",
-    tools=[code_interpreter],
 )
 
 
@@ -24,11 +21,16 @@ code_analysis_task = Task(
 	# Create a crew and add the task
 crew = Crew(
 	agents=[coding_agent],
-	tasks=[code_analysis_task]
+	tasks=[code_analysis_task],
+	varbose=False
 	)
+
 
 	# Execute the crew
 def go():
 	print("Code Analysis Result:")
-	result = crew.kickoff()
+	topic = "print('hello world')"
+	result = crew.kickoff(inputs={"topic": topic})
+    
 	print(result)
+	
