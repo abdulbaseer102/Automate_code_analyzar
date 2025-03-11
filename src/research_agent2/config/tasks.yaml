@@ -1,0 +1,25 @@
+
+
+code_review_and_bug_fixes:
+  description: >
+    Review the generated game code for syntax errors, logic mistakes,
+    missing imports, and security vulnerabilities.
+
+    Your final answer must be the corrected Python code.
+  expected_output: >
+    A corrected version of the Python game code.
+  agent: code_quality_engineer
+
+game_testing_and_validation:
+  description: >
+    Validate that the game functions correctly and meets the initial requirements.
+
+    Ensure that:
+    - The game is playable.
+    - The logic follows the design.
+    - There are no unexpected crashes.
+
+    Your final answer must be a confirmed, fully functional game code.
+  expected_output: >
+    The final validated version of the Python game.
+  agent: game_tester

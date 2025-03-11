@@ -8,12 +8,14 @@ dependencies = [
     "crewai[tools]>=0.100.1,<1.0.0",
     "numpy>=2.2.3",
     "pandas>=2.2.3",
+    "pygame>=2.6.1",
 ]
 
 [project.scripts]
 research_agent2 = "research_agent2.main:run"
 run_crew = "research_agent2.main:run"
 go = "research_agent2.crew:go"
+go1 = "research_agent2.game_developer:main"
 train = "research_agent2.main:train"
 replay = "research_agent2.main:replay"
 test = "research_agent2.main:test"
