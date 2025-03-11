@@ -14,7 +14,7 @@ game_testing_and_validation:
   description: >
     Validate that the game functions correctly and meets the initial requirements.
 
-    Ensure that:
+    Ensure that::
     - The game is playable.
     - The logic follows the design.
     - There are no unexpected crashes.

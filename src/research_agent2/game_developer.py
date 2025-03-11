@@ -43,9 +43,9 @@ def setup_crew():
          instructions
          {game_description}
 
-    - The player should be represented using a **blue rectangle**.
-    - The enemy should be represented using a **red circle**.
-    - The bullet should be represented using a **green rectangle**.
+    - The player should be represented using a *blue rectangle*.
+    - The enemy should be represented using a *red circle*.
+    - The bullet should be represented using a *green rectangle*.
     - Do NOT use images, only use `pygame.draw` functions.
     - The final answer must be the **full Python code**, with no explanations.
         """,
