@@ -1,8 +1,11 @@
 from crewai import Agent, Task, Crew,LLM,Process
 from IPython.display import Markdown
+
 import os
-# Initialize the tool
-# Create an agent with code execution enabled
+
+# Load API key from environment variable
+os.environ["GEMININE_API_KEY"] = "AIzaSyAqUg4mAvMsDFj1-3JABZGvlmgT4pDiPTM"
+
 coding_agent = Agent(
     role="Python Code Analyzer",
     goal="Analyze and provide insights on Python code:{topic}.",
@@ -21,7 +24,7 @@ code_analysis_task = Task(
 
 planning_llm = LLM(
 	model = "gemini/gemini-1.5-flash",
-	api_key = "GEMINI_API_KEY",
+	api_key = "AIzaSyAqUg4mAvMsDFj1-3JABZGvlmgT4pDiPTM",
 )
 
 crew = Crew(
